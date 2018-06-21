@@ -16,7 +16,7 @@ namespace rockPaperScissors
         //member constructor
         public Game()
         {
-            player1 = new Player1();
+            player1 = new Human("Player One");
         }
 
         //member methods
@@ -35,7 +35,7 @@ namespace rockPaperScissors
             Console.WriteLine("Are you playing with another player? Type 'yes' or 'no'. If you have no friends you will play against a computer :(");
             if (Console.ReadLine() == "yes")
             {
-                player2 = new Player();
+                player2 = new Human("Player Two");
             }
             else if (Console.ReadLine() == "no")
             {
