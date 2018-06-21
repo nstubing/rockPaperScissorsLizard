@@ -11,6 +11,7 @@ namespace rockPaperScissors
         //member variable
         public string name;
         public int pick;
+        public int wins;
 
         //constructor
         public Player()
@@ -21,7 +22,7 @@ namespace rockPaperScissors
         public virtual void ChooseGesture()
         {
             // choose gesture
-            Console.WriteLine("Choose a gesture! Write 'rock', 'paper', 'scissors', 'lizard', or 'spock'." );
+            Console.WriteLine("Choose a gesture! Write 'rock', 'paper', 'scissors', 'spock', or 'lizard'." );
             switch(Console.ReadLine().ToLower().Trim())
             {
                 case "rock":
@@ -33,10 +34,10 @@ namespace rockPaperScissors
                 case "scissors":
                     pick = 2;
                     break;
-                case "lizard":
+                case "spock":
                     pick = 3;
                     break;
-                case "spock":
+                case "lizard":
                     pick = 4;
                     break;
                 default:

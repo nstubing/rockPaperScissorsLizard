@@ -15,9 +15,8 @@ namespace rockPaperScissors
         }
         public override void ChooseGesture()
         {
-            base.ChooseGesture();
             Random rnd = new Random();
-            Player.pick = rnd.Next(0, 5);
+            pick = rnd.Next(0, 5);
         }
 
     }
