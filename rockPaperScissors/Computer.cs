@@ -8,12 +8,17 @@ namespace rockPaperScissors
 {
     class Computer:Player
     {
-        int computerThrow;
 
-        public Computer()
+        public Computer(string name)
         {
-            computerThrow = num.Next(1, 5);
+            this.name = name;
         }
-        Random num = new Random();
+        public override void ChooseGesture()
+        {
+            base.ChooseGesture();
+            Random rnd = new Random();
+            Player.pick = rnd.Next(0, 5);
+        }
+
     }
 }

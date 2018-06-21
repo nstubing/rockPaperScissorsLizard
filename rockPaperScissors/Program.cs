@@ -13,6 +13,7 @@ namespace rockPaperScissors
             Game myGame = new Game();
             myGame.DisplayRules();
             myGame.GetPlayerTwo();
+            myGame.RunRound();
 
 
         }

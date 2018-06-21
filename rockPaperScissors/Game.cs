@@ -33,18 +33,18 @@ namespace rockPaperScissors
         {
             
             Console.WriteLine("Are you playing with another player? Type 'yes' or 'no'. If you have no friends you will play against a computer :(");
-            if (Console.ReadLine() == "yes")
+            switch(Console.ReadLine().ToLower().Trim())
             {
-                player2 = new Human("Player Two");
-            }
-            else if (Console.ReadLine() == "no")
-            {
-                player2 = new Computer();
-            }
-            else
-            {
-                Console.WriteLine("Please enter a valid option only!");
-                GetPlayerTwo();
+                case "yes":
+                    player2 = new Human("Player Two");
+                    break;
+                case "no":
+                    player2 = new Computer("Computer");
+                    break;
+                default:
+                    Console.WriteLine("Please enter a valid option only!");
+                    GetPlayerTwo();
+                    break;
             }
         }
 
@@ -54,6 +54,11 @@ namespace rockPaperScissors
             player1.ChooseGesture();
             player2.ChooseGesture();
         }
+       // public void DeclareWinner()
+       // {
+         //   public int a = int Player.player1.pick;
+           // public int b = player2.pick;
+        //}
 
     }
 }

@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    class Player1 : Player
+    class Human : Player
     {
         //member variable
+
+        public Human(string name)
+        {
+            this.name = name;
+        }
     }
 }
