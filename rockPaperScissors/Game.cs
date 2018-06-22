@@ -13,17 +13,17 @@ namespace rockPaperScissors
         //string inputTwo;
         Player player1;
         Player player2;
-        public string[] gestureOptions;
+        public List<string> gestureOptions;
         public string[,] gestureOutcomes;
-        public int[] calculationOptions;
+        public List<int> calculationOptions;
 
         //member constructor
         public Game()
         {
             player1 = new Human("Player One");
-            gestureOptions=new string[] { "rock", "paper", "scissors", "spock", "lizard" };
-            gestureOutcomes=new string [,] { { "", "", "crushes", "", "crushes" }, { "covers", "", "", "disproves", "" }, { "", "cuts", "", "", "decapitates" }, { "vaporizes", "", "disassembles", "", "" }, { "", "eats", "", "poisons", "" } };
-            calculationOptions=new int[] { 4, 0, 1, 2, 3, 4, 0, 1 };
+            gestureOptions=new List<string> { "rock", "paper", "scissors", "spock", "lizard" };
+            gestureOutcomes=new string[,] { { "", "", "crushes", "", "crushes" }, { "covers", "", "", "disproves", "" }, { "", "cuts", "", "", "decapitates" }, { "vaporizes", "", "disassembles", "", "" }, { "", "eats", "", "poisons", "" } };
+            calculationOptions=new List<int> { 4, 0, 1, 2, 3, 4, 0, 1 };
         }
 
         //member methods
